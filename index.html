@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+  font-family: "lato", sans-serif;
+  background-color: #eeeeee;
+}
+
+.main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* ============= Header =========== */
+
+#header {
+  display: flex;
+  position: fixed;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #eeeeee;
+}
+
+.logo {
+  display: flex;
+}
+
+#header-img {
+  height: 75px;
+  width: 100%;
+}
+
+#nav-bar {
+  display: flex;
+  flex-grow: 1;
+  min-height: 60px;
+  align-items: center;
+}
+
+#nav-bar ul {
+  text-align: center;
+  padding: 0;
+}
+
+#nav-bar ul li {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#nav-bar ul li a {
+  color: #000000;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* ========== Form =========== */
+
+.form {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 180px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form form input {
+  display: block;
+}
+
+.form form input:first-child {
+  margin-bottom: 20px;
+  max-width: 300px;
+  background-color: #ffffff;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid green; 
+}
+
+.form form input:last-child {
+  margin-bottom: 20px;
+  background-color: #B2EA70;
+  padding: 4px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* ======== Features ========*/
+
+#features {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#features .card {
+  display: flex;
+  align-items: center;
+}
+
+#features .card .icon {
+  max-width: 100px;
+  width: 100%;
+  color: #ff8c00;
+  display: none;
+}
+
+#features .card .content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* ============= Processing ==============*/
+
+#processing {
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+/* ============== Pricing ============== */
+
+#pricing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#pricing .card {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  max-width: 340px;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#pricing .card h2 {
+  background-color: #FFD66B;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#pricing .card strong {
+  font-size: 24px;
+}
+
+#pricing .card button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #FF9D72;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ============= Footer ============= */
+
+footer {
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+  background-color: #dddddd;
+}
+
+footer > ul {
+  padding: 0;
+}
+
+footer > ul li {
+  display: inline;
+}
+
+footer > ul li:not(last-child) {
+  margin-right: 10px;
+}
+
+footer > ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* ============== Media Query =============*/
+
+@media (min-width: 550px) {
+  #features .card .icon {
+    display: block;
+  } 
+  
+  #features .card .content {
+    text-align: left;
+  }
+}
+
+@media (min-width: 600px) {
+  #header {
+    flex-direction: row;
+    left: 5%;
+    right: 5%;
+  }
+  
+ #nav-bar ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #nav-bar ul li {
+    display: inline;
+    margin-right: 50px;
+  }
+
+  #nav-bar ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  #pricing {
+    flex-direction: row;
+    align-self: center;
+  }
+
+  #pricing .card:not(last-child) {
+    margin-right: 15px;
+  }
+}
+
+</style>
+
+<body>
+    <div class="main">
+        <header id="header">
+          
+          <div class="logo">
+            <img id="header-img" alt="tea image" src="https://cdn-icons-png.flaticon.com/512/2224/2224161.png" />
+          </div>
+          <nav id="nav-bar">
+            <ul>
+              <li><a class="nav-link" href="#features">Features</a></li>
+              <li><a class="nav-link" href="#processing">Processing</a></li>
+              <li><a class="nav-link" href="#pricing">Pricing</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <div class="form">
+            <h2>Cha Baagan</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+              <input type="email" placeholder="Enter your email adress" name="email" id="email" requires />
+              <input id="submit" type="submit" value="Get Started" />
+            </form>
+          </div>
+          
+        <div id="features">
+           <div class="card">
+            <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+            <div class="content">
+              <h2>Premium Materials</h2>
+              <p>
+                 Cha Baagan understands the magic that makes the delightful cup, which is why we only use the best and premium tea leaves, which creates our natural tea blend.
+              </p>
+            </div>
+          </div>
+          
+           <div class="card">
+            <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+            <div class="content">
+              <h2>Fast Shipping</h2>
+              <p>
+                 We make sure that our tea packets are delivered within 7 days and you receive in a good condition. We also make sure you get the best unboxing experience.
+              </p>
+            </div>
+          </div>
+      
+          <div class="card">
+            <div class="icon"><i class="fa fa-3x fa-battery-full"></i></div>
+            <div class="content">
+              <h2>Quality Assurance</h2>
+              <p>
+                 For every purchase you make, we will ensure there are no damages or faults and we will check and test the taste as well as the quality of your tea.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div id="processing">
+          <iframe id="video" 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/m6yiKKXRs2o" 
+                  frameborder="0" 
+                  title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen></iframe>
+        </div>
+        
+        <div id="pricing">
+          <div class="card">
+            <h2>Herbal Tea</h2>
+            <strong>INR 600</strong>
+            <h5>Health benefits</h5>
+            <p>Improved Mental Alertness</p>
+            <p>Improved Cardiovascular Health</p>
+            <p>Improved Oral Health</p>
+            <p>Weight Loss</p>
+            <p>Fights Infection</p>
+            <button id="button">select</button>
+          </div>
+          
+          <div class="card">
+            <h2>Green Tea</h2>
+            <strong>INR 800</strong>
+            <h5>Health benefits</h5>
+            <p>Improved Mental Alertness</p>
+            <p>Improved Cardiovascular Health</p>
+            <p>Improved Oral Health</p>
+            <p>Weight Loss</p>
+            <p>Fights Infection</p>
+            <button id="button">select</button>
+          </div>
+          
+          <div class="card">
+            <h2>Black Tea</h2>
+            <strong>INR 1000</strong>
+            <h5>Health benefits</h5>
+            <p>Improved Mental Alertness</p>
+            <p>Improved Cardiovascular Health</p>
+            <p>Improved Oral Health</p>
+            <p>Weight Loss</p>
+            <p>Fights Infection</p>
+            <button id="button">select</button>
+          </div>
+        </div>
+        
+        <footer>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+             <li><a href="#">Terms</a></li>
+             <li><a href="#">Contact</a></li>
+          </ul>
+          <p>Copyright &copy 2022 Cha Baagan.</p>
+        </footer>
+      </div>
+      
+</body>
+</html>
